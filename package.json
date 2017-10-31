@@ -1,0 +1,20 @@
+{
+  "name": "hash_function",
+  "version": "1.0.0",
+  "description": "hash function (e.g. md5)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hash",
+    "function",
+    "md5"
+  ],
+  "author": "Lukasz Wolniak",
+  "license": "ISC",
+  "dependencies": {
+    "dateformat": "^3.0.2",
+    "node-stopwatch": "0.0.1"
+  }
+}
