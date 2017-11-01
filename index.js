@@ -33,83 +33,125 @@ for(let i = 1; i<=5; i++){
   sw.reset();
   sw.start();
   const hash2 = crypto.createHmac('sha1', secretKey).update(textToEncrypt50mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha160 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  fs.appendFileSync('tests.txt', 'sha1-160 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
   //console.log('\n' + hash2 + '\n');
 
   sw.reset();
   sw.start();
-  const hash3 = crypto.createHmac('sha256', secretKey).update(textToEncrypt50mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha256 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  const hash3 = crypto.createHmac('sha224', secretKey).update(textToEncrypt50mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-224 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
   //console.log('\n' + hash3 + '\n');
 
   sw.reset();
   sw.start();
-  const hash4 = crypto.createHmac('sha512', secretKey).update(textToEncrypt50mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha512 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  const hash4 = crypto.createHmac('sha256', secretKey).update(textToEncrypt50mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha3-256 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
-  //console.log('\n' + hash4 + '\n\n');
+  //console.log('\n' + hash4 + '\n');
+
+  sw.reset();
+  sw.start();
+  const hash5 = crypto.createHmac('sha384', secretKey).update(textToEncrypt50mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-384 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash5 + '\n\n');
+
+  sw.reset();
+  sw.start();
+  const hash6 = crypto.createHmac('sha512', secretKey).update(textToEncrypt50mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-512 processing time for 50mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash6 + '\n\n');
 
   /************************************** 100 MB **************************************************/
 
   sw.reset();
   sw.start();
-  const hash5 = crypto.createHmac('md5', secretKey).update(textToEncrypt100mb).digest('hex');
+  const hash7 = crypto.createHmac('md5', secretKey).update(textToEncrypt100mb).digest('hex');
   fs.appendFileSync('tests.txt', '\n\nmd5 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
-  sw.stop();
-  //console.log('\n' + hash5 + '\n');
-
-  sw.reset();
-  sw.start();
-  const hash6 = crypto.createHmac('sha1', secretKey).update(textToEncrypt100mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha160 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
-  sw.stop();
-  //console.log('\n' + hash6 + '\n');
-
-  sw.reset();
-  sw.start();
-  const hash7 = crypto.createHmac('sha256', secretKey).update(textToEncrypt100mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha256 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
   //console.log('\n' + hash7 + '\n');
 
   sw.reset();
   sw.start();
-  const hash8 = crypto.createHmac('sha512', secretKey).update(textToEncrypt100mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha512 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  const hash8 = crypto.createHmac('sha1', secretKey).update(textToEncrypt100mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha1-160 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
-  //console.log('\n' + hash8 + '\n\n');
+  //console.log('\n' + hash8 + '\n');
+
+  sw.reset();
+  sw.start();
+  const hash9 = crypto.createHmac('sha224', secretKey).update(textToEncrypt100mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-224 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash9 + '\n');
+
+  sw.reset();
+  sw.start();
+  const hash10 = crypto.createHmac('sha256', secretKey).update(textToEncrypt100mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-256 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash10 + '\n');
+
+  sw.reset();
+  sw.start();
+  const hash11 = crypto.createHmac('sha384', secretKey).update(textToEncrypt100mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-384 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash11 + '\n\n');
+
+  sw.reset();
+  sw.start();
+  const hash12 = crypto.createHmac('sha512', secretKey).update(textToEncrypt100mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-512 processing time for 100mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash12 + '\n\n');
 
   /************************************** 200 MB **************************************************/
 
   sw.reset();
   sw.start();
-  const hash9 = crypto.createHmac('md5', secretKey).update(textToEncrypt200mb).digest('hex');
+  const hash13 = crypto.createHmac('md5', secretKey).update(textToEncrypt200mb).digest('hex');
   fs.appendFileSync('tests.txt', '\n\nmd5 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
   //console.log('\n' + hash9 + '\n');
 
   sw.reset();
   sw.start();
-  const hash10 = crypto.createHmac('sha1', secretKey).update(textToEncrypt200mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha160 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  const hash14 = crypto.createHmac('sha1', secretKey).update(textToEncrypt200mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha1-160 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
-  //console.log('\n' + hash10 + '\n');
+  //console.log('\n' + hash14 + '\n');
 
   sw.reset();
   sw.start();
-  const hash11 = crypto.createHmac('sha256', secretKey).update(textToEncrypt200mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha256 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  const hash15 = crypto.createHmac('sha224', secretKey).update(textToEncrypt200mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-224 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
-  //console.log('\n' + hash11 + '\n');
+  //console.log('\n' + hash15 + '\n');
 
   sw.reset();
   sw.start();
-  const hash12 = crypto.createHmac('sha512', secretKey).update(textToEncrypt200mb).digest('hex');
-  fs.appendFileSync('tests.txt', 'sha512 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n\n');
+  const hash16 = crypto.createHmac('sha256', secretKey).update(textToEncrypt200mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-256 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
   sw.stop();
-  //console.log('\n' + hash12 + '\n\n');
+  //console.log('\n' + hash16 + '\n');
+
+  sw.reset();
+  sw.start();
+  const hash17 = crypto.createHmac('sha384', secretKey).update(textToEncrypt200mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-384 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n');
+  sw.stop();
+  //console.log('\n' + hash17 + '\n\n');
+
+  sw.reset();
+  sw.start();
+  const hash18 = crypto.createHmac('sha512', secretKey).update(textToEncrypt200mb).digest('hex');
+  fs.appendFileSync('tests.txt', 'sha2-512 processing time for 200mb file : ' + sw.elapsedMilliseconds + 'ms\n\n');
+  sw.stop();
+  //console.log('\n' + hash18 + '\n\n');
 }
 
 console.log('\nDone! Please open tests.txt to view processing time for operations.\n');
